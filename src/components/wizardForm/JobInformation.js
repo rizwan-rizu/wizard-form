@@ -11,7 +11,8 @@ import { jobTitlesList, skillsList, educationList, experienceList } from '../../
 const useStyle = makeStyles((theme) => ({
   fileUpload: { background: pallet.green, color: pallet.white, width: 330, height: 60, '&:hover': { background: pallet.green } },
   fileUploadLabel: { color: pallet.gray200, fontSize: 12 },
-  upload: { cursor: "pointer", position: "absolute", width: 332, opacity: 0, height: 60 }
+  upload: { cursor: "pointer", position: "absolute", width: 332, opacity: 0, height: 60 },
+  aesterisk: { color: pallet.red }
 }))
 
 //component
@@ -82,7 +83,7 @@ const JobInformation = props => {
         />
       </Box>
       <Box mt={7}>
-        <Typography className={classes.fileUploadLabel} variant="body2">Add if there is any inspiration *</Typography>
+        <Typography className={classes.fileUploadLabel} variant="body2">Add if there is any inspiration <span className={classes.aesterisk}>*</span></Typography>
         <Box mt={2.5}>
           <Button className={classes.fileUpload} variant="contained" component="label" startIcon={<CloudUpload />}> go to select template
             <input
